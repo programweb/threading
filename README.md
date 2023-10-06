@@ -41,9 +41,10 @@ sample.
 
 Here we create a lock to protect access to the error_info list
 
-Create a lock to protect access to the error_info list
-It is an instance of the threading.Lock class. 
-A lock, short for "mutex" (short for "mutual exclusion"), 
+We create a lock to protect access to the error_info list preventing
+potential issues caused by concurrent access to shared data.
+error_info is an instance of the threading.Lock class. 
+A lock, short for "_mutex_" (short for "_mutual exclusion_"), 
 is a synchronization mechanism used in multi-threaded programs 
 to control access to shared resources or critical sections of 
 code. It allows only one thread to access a particular 
