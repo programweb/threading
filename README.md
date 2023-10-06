@@ -13,9 +13,11 @@ An error is raised for thread 1 to show handling.
 Thread 1 stops at that point.
 
 **SAMPLE 1**
+&nbsp;
 The error is printed from the target function itself.
 
 **SAMPLE 2**
+&nbsp;
 A list called "error_info" holds tuples of error information.
 This allows for the printing (and further handling if needed) of the error message
 outside of the target function.
@@ -33,6 +35,7 @@ to ensure thread safety when accessing shared data. This is demonstrated in the 
 sample.
 
 **SAMPLE 3**
+&nbsp;
 Here we create a lock to protect access to the error_info list
 
 Create a lock to protect access to the error_info list
