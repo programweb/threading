@@ -57,7 +57,7 @@ corruption.
 
 
 POSSIBLE EXECUTION
-```
+```bash
 $ python3 sample3.py 
 Thread 1 - Count 0
 Thread 1 - Count 1
