@@ -54,3 +54,75 @@ modifying shared data.  While a thread holds the lock, no other
 thread can acquire it. This ensures that only one thread at a 
 time can access or modify the error_info list, preventing data 
 corruption.
+
+
+POSSIBLE EXECUTION
+```
+$ python3 sample3.py 
+Thread 1 - Count 0
+Thread 1 - Count 1
+Thread 1 - Count 2
+Thread 1 - Count 3
+Thread 1 - Count 4
+Thread 1 - Count 5
+Thread 1 - Count 6
+Thread 1 - Count 7
+Thread 2 - Count 0
+Main thread processing real-time updates...
+Thread 1 - Count 8
+Thread 2 - Count 1
+Main thread processing real-time updates...
+Thread 1 - Count 9
+Thread 2 - Count 2
+Thread 2 - Count 3
+Thread 2 - Count 4
+Thread 1 - Count 10
+Main thread processing real-time updates...
+Thread 2 - Count 5
+Thread 2 - Count 6
+Thread 2 - Count 7
+Thread 2 - Count 8
+Thread 2 - Count 9
+Thread 2 - Count 10
+Thread 2 - Count 11
+Thread 2 - Count 12
+Thread 2 - Count 13
+Thread 2 - Count 14
+Thread 2 - Count 15
+Thread 2 - Count 16
+Thread 2 - Count 17
+Thread 2 - Count 18
+Thread 2 - Count 19
+Thread 2 - Count 20
+Thread 2 - Count 21
+Thread 2 - Count 22
+Thread 2 - Count 23
+Thread 2 - Count 24
+Thread 2 - Count 25
+Thread 2 - Count 26
+Thread 2 - Count 27
+Thread 2 - Count 28
+Thread 2 - Count 29
+Thread 2 - Count 30
+Thread 2 - Count 31
+Thread 2 - Count 32
+Thread 2 - Count 33
+Thread 2 - Count 34
+Thread 2 - Count 35
+Thread 2 - Count 36
+Thread 2 - Count 37
+Thread 2 - Count 38
+Thread 2 - Count 39
+Thread 2 - Count 40
+Thread 2 - Count 41
+Thread 2 - Count 42
+Thread 2 - Count 43
+Thread 2 - Count 44
+Thread 2 - Count 45
+Thread 2 - Count 46
+Thread 2 - Count 47
+Thread 2 - Count 48
+Thread 2 - Count 49
+Thread 1 encountered an error: An error occurred in Thread 1 at iteration: 10
+$
+```
