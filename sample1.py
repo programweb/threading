@@ -9,7 +9,7 @@ def thread_function(thread_id):
     except Exception as e:
         print(f"Thread {thread_id} encountered an error: {str(e)}")
 
-# Create two Thread objects with different target functions
+# Create two Thread objects with same target function
 thread1 = threading.Thread(target=thread_function, args=("Thread 1",))
 thread2 = threading.Thread(target=thread_function, args=("Thread 2",))
 
