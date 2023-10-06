@@ -13,7 +13,7 @@ def thread_function(thread_id):
         # Append error information to the shared list
         error_info.append((thread_id, str(e)))
 
-# Create two Thread objects with different target functions
+# Create two Thread objects with same target function
 thread1 = threading.Thread(target=thread_function, args=("Thread 1",))
 thread2 = threading.Thread(target=thread_function, args=("Thread 2",))
 
