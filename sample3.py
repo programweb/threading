@@ -2,7 +2,7 @@ import threading
 
 # Create a list to store error information
 error_info = []
-# Create a lock to protect access to the error_info list
+# Create a lock object to protect access to the error_info list
 error_lock = threading.Lock()
 
 def thread_function(thread_id):
@@ -12,9 +12,11 @@ def thread_function(thread_id):
             if thread_id == "Thread 1" and i == 10:
                 raise Exception(f"An error occurred in {thread_id} at iteration: {i}")
     except Exception as e:
+        # Acquire the lock with 'with'
         with error_lock:
             # Append error information to the shared list while holding the lock
             error_info.append((thread_id, str(e)))
+        # The lock is automatically released when the 'with' block exits.
 
 # Create two Thread objects with same target function
 thread1 = threading.Thread(target=thread_function, args=("Thread 1",))
